@@ -12,18 +12,22 @@ import {
 const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiInstagramLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiFacebookBoxLine />
-      </Link>{" "}
-      <Link href={""} className="hover:text-accent transition-all duration-300">
+      <a
+        href="https://www.linkedin.com/in/sudhanshu-sharma-657aa5207/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-accent transition-all duration-300"
+      >
         <RiLinkedinBoxLine />
-      </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
+      </a>
+      <a
+        href="https://github.com/Sudhanshu7300"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-accent transition-all duration-300"
+      >
         <RiGithubLine />
-      </Link>
+      </a>
     </div>
   );
 };

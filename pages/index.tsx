@@ -10,15 +10,15 @@ const Home = () => {
       {/* text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30  to-black/10 ">
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
-          <motion.h1
+          <motion.h2
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h2"
           >
             <span className="text-accent"> Frontend Developer </span>
-          </motion.h1>
+          </motion.h2>
           {/* Subtitle */}
           <motion.p
             variants={fadeIn("down", 0.3)}
@@ -27,10 +27,18 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto  xl:mx-0  mb-10 xl:mb-16"
           >
-            A seasoned front-end developer with 2 years of experience in
-            building and maintaining high quality web applications using
-            technologies like React JS v18+, Next JS v14+, TypeScript v5, HTML,
-            CSS, and JavaScript. Redux, zustand,
+            A seasoned Frontend Developer with 3 years of expertise, I
+            specialize in end-to-end project development, showcasing proficiency
+            in React JS and Next JS. My skills extend to crafting responsive and
+            dynamic user interfaces using HTML, CSS, and JavaScript, backed by a
+            robust command of TypeScript. I excel in designing scalable system
+            architectures and successfully deploying projects onto servers,
+            ensuring secure web communication through SSL integration.
+            Collaboration comes naturally to me, enabling effective teamwork
+            with cross-functional teams and demonstrating adaptability in
+            dynamic environments. Committed to delivering high-quality
+            solutions, I stay abreast of industry trends and incorporate best
+            practices into my work.
           </motion.p>
           {/* btn */}
           <div className="flex justify-center xl:hidden  relative">

@@ -21,29 +21,34 @@ import { FreeMode, Pagination } from "swiper";
 // data
 const serviceData = [
   {
+    icon: <RxDesktop />,
+    title: "Web Development",
+    description:
+      "Offering comprehensive web development services, I bring a wealth of experience in creating visually appealing and functional websites.",
+  },
+  {
     icon: <RxCrop />,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "System Architecture",
+    description:
+      "Specializing in System Design, I excel in crafting scalable architectures to establish the foundation for robust and efficient web application",
   },
   {
     icon: <RxPencil2 />,
-    title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxDesktop />,
-    title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Deployment",
+    description:
+      "I have a successful track record of deploying projects onto servers, secure web communication experience through SSL integration.",
   },
   {
     icon: <RxReader />,
-    title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Commitment to Quality",
+    description:
+      "Dedicated to delivering high-quality solutions, integrating industry trends and best practices to exceed client expectations",
   },
   {
     icon: <RxRocket />,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "SEO Optimization",
+    description:
+      "Pecializing in SEO to enhance digital project visibility and performance through comprehensive on-page and off-page strategies.",
   },
 ];
 
@@ -63,7 +68,7 @@ const ServiceSlider = () => {
       freeMode={true}
       pagination={{ clickable: true }}
       modules={[FreeMode, Pagination]}
-      className="h-[240px] sm:h-[340px]"
+      className="h-[240px] sm:h-[380px]"
     >
       {serviceData.map((item, index) => {
         return (
@@ -78,7 +83,7 @@ const ServiceSlider = () => {
               {/* title & desc */}
               <div className="mb-8">
                 <div className="mb-2 text-lg">{item.title} </div>
-                <div className="max-w-[350px] leading-normal">
+                <div className="max-w-[390px] leading-normal">
                   {item.description}{" "}
                 </div>
               </div>
