@@ -1,7 +1,7 @@
-import TestimonialSlider from "@/components/TestimonialSlider";
+import SystemDesignSlider from "@/components/SystemDesignSlider";
 import { fadeIn } from "@/variants";
 import { motion } from "framer-motion";
-const Testimonials = () => {
+const designs = () => {
   return (
     <div className="h-full bg-primary/30 py-32 text-center">
       <div className="container mx-auto h-full flex flex-col justify-center">
@@ -11,17 +11,17 @@ const Testimonials = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="h2 mb-8 xl:mb-0"
+          className="h2 mb-8 mt-16 xl:mb-0"
         >
-          Whats clients <span className="text-accent"> say. </span>{" "}
+          System <span className="text-accent"> Designs. </span>
         </motion.h2>
         {/* slider */}
         <div>
-          <TestimonialSlider />{" "}
+          <SystemDesignSlider />{" "}
         </div>
       </div>
     </div>
   );
 };
 
-export default Testimonials;
+export default designs;

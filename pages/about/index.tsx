@@ -51,24 +51,24 @@ const aboutData: Array<AboutDataItem> = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <SiTypescript />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiRedux />,
+          <FaHtml5 key="html" />,
+          <FaCss3 key="css" />,
+          <FaJs key="js" />,
+          <SiTypescript key="typescript" />,
+          <FaReact key="react" />,
+          <SiNextdotjs key="nextjs" />,
+          <SiRedux key="redux" />,
         ],
       },
       {
         title: "Tools",
         icons: [
-          <FaFigma />,
-          <FaSlack />,
-          <RiNotionFill />,
-          <SiAsana />,
-          <FaJira />,
-          <FaTrello />,
+          <FaFigma key="figma" />,
+          <FaSlack key="slack" />,
+          <RiNotionFill key="notion" />,
+          <SiAsana key="asana" />,
+          <FaJira key="jira" />,
+          <FaTrello key="trello" />,
         ],
       },
     ],
@@ -158,11 +158,11 @@ const About = () => {
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
             As an experienced Frontend Developer with a rich 3-year journey in
-            the tech realm, I've finely crafted my expertise in steering
+            the tech realm, I have finely crafted my expertise in steering
             projects from inception to completion. My focus lies in leveraging
             technologies like React JS, Next JS, HTML, CSS, JavaScript, and
             TypeScript to bring innovative and dynamic web solutions to life.
-            Throughout this dynamic expedition, I've embraced constant growth
+            Throughout this dynamic expedition, I have embraced constant growth
             and evolution, adapting to the ever-changing landscape of
             technology.
           </motion.p>
@@ -225,15 +225,15 @@ const About = () => {
           className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
         >
           <div className="flex gap-x-4 xl:gap-z-8 mx-auto xl:mx-0 mb-4">
-            {aboutData.map((item, itemIndex) => {
+            {aboutData.map((item, detailsIndex) => {
               return (
                 <div
-                  key={itemIndex}
+                  key={detailsIndex}
                   className={` ${
-                    index === itemIndex &&
+                    index === detailsIndex &&
                     "text-accent  after:w-[100%] after:bg-accent after:transition-all after:duration-300"
                   } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px]  after:absolute  after:-bottom-1 after:left-0`}
-                  onClick={() => setIndex(itemIndex)}
+                  onClick={() => setIndex(detailsIndex)}
                 >
                   {item.title}
                 </div>
@@ -241,10 +241,10 @@ const About = () => {
             })}
           </div>
           <div className=" py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-            {aboutData[index].info.map((item, itemIndex) => {
+            {aboutData[index].info.map((item, aboutIndex) => {
               return (
                 <div
-                  key={itemIndex}
+                  key={aboutIndex}
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center"
                 >
                   {/* title */}
@@ -253,8 +253,12 @@ const About = () => {
                   <div className="">{item.stage}</div>
                   {/* icons */}
                   <div className="flex gap-x-4">
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-2xl text-white">{icon}</div>;
+                    {item.icons?.map((icon, iconIndex) => {
+                      return (
+                        <div key={iconIndex} className="text-2xl text-white">
+                          {icon}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
